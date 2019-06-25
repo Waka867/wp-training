@@ -14,11 +14,23 @@ add_theme_support( 'custom-logo' );
 add_theme_support( 'customize-selective-refresh-widgets' );
 add_theme_support( 'starter-content' );
 
+
+
+
+
+
 // Load CSS
 function wphierarchy_enqueue_styles() {
-	wp_enqueue_style( 'main-css', get_stylesheet_directory_uri . '/style.css', [], array(), 'all' );
+	wp_enqueue_style( 'main-css', get_stylesheet_directory_uri() . '/style.css', [], array(), 'all' );
 }
 add_action( 'wp_enqueue_scripts', 'wphierarchy_enqueue_styles' );
+
+
+
+
+
+
+
 
 
 // Create and load custom post type
@@ -42,6 +54,15 @@ add_action('init', 'portfolio_post_type_init');
 
 
 
+
+
+
+// Register Menu Locations
+register_nav_menus( 
+	[
+		'main-menu' => esc_html__( 'Main Menu', 'wphierarchy' ),
+	]
+);
 
 
 ?>
