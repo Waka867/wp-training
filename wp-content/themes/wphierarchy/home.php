@@ -1,3 +1,4 @@
+
 <?php get_header(); ?>
 
 
@@ -11,7 +12,7 @@
             the_post();
 
             // Gets article/content structure for content that goes in THE LOOP
-            get_template_part( '/template-parts/content');
+            get_template_part( '/template-parts/content', 'posts');
 
             }
           } else {
@@ -21,9 +22,11 @@
 
           }
 
-        ?>
+	?>
 
-        <p>Index.php</p>
+	<?php echo paginate_links();  ?>
+
+        <p>Home.php</p>
 
       </main>
     <?php get_sidebar(); ?>

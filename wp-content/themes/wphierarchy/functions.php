@@ -35,7 +35,6 @@ add_action( 'wp_enqueue_scripts', 'wphierarchy_enqueue_styles' );
 
 // Create and load custom post type
 function portfolio_post_type_init() {
-
 	register_post_type('portfolio', array(
 	       	'labels' 	=> array(
                 	'name' 		=> __( 'Portfolio' ),
@@ -46,11 +45,11 @@ function portfolio_post_type_init() {
 		'show_in_menu'	=> true,
 		'public' => true
 	));
-
 }
-
 // Connect action to the theme set-up hook
 add_action('init', 'portfolio_post_type_init');
+
+
 
 
 
@@ -63,6 +62,35 @@ register_nav_menus(
 		'main-menu' => esc_html__( 'Main Menu', 'wphierarchy' ),
 	]
 );
+
+
+
+
+
+
+// Setup Widget Areas
+function wphierarchy_widgets_init() {
+	register_sidebar([
+		'name' 		=> esc_html__( 'Main Sidebar', 'wphierarchy' ),
+		'id'		=> 'main-sidebar',
+		'description' 	=> esc_html__( 'Add Widgets for main sidebar here', 'wphierarchy' ),
+		'before_widget'	=> '<section class="widget">',
+		'after_widget'	=> '</section>',
+		'before_title'	=> '<h2 class="widget-title">',
+		'after-title'	=> '</h2>'	
+	]);
+	register_sidebar([
+		'name' 		=> esc_html__( 'Derp Footer Area', 'wphierarchy' ),
+		'id'		=> 'derp-footer-area',
+		'description' 	=> esc_html__( 'Add Widgets for Derp sidebar here', 'wphierarchy' ),
+		'before_widget'	=> '<section class="widget">',
+		'after_widget'	=> '</section>',
+		'before_title'	=> '<h2 class="widget-title">',
+		'after-title'	=> '</h2>'	
+	]);
+}
+
+add_action( 'widgets_init', 'wphierarchy_widgets_init' );
 
 
 ?>

@@ -11,7 +11,7 @@
             the_post();
 
             // Gets article/content structure for content that goes in THE LOOP
-            get_template_part( '/template-parts/content');
+            get_template_part( '/template-parts/content', get_post_format() );
 
             }
           } else {
@@ -23,7 +23,7 @@
 
         ?>
 
-        <p>Index.php</p>
+        <p>Single.php</p>
 
       </main>
     <?php get_sidebar(); ?>

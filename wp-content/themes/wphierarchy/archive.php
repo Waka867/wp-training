@@ -1,17 +1,20 @@
+
 <?php get_header(); ?>
 
 
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
 
-      <?php
+
+
+	<?php
 
         if( have_posts() ) {
           while( have_posts() ){
             the_post();
 
             // Gets article/content structure for content that goes in THE LOOP
-            get_template_part( '/template-parts/content');
+            get_template_part( '/template-parts/content', 'posts');
 
             }
           } else {
@@ -21,9 +24,11 @@
 
           }
 
-        ?>
+	?>
 
-        <p>Index.php</p>
+	<?php echo paginate_links();  ?>
+
+        <p>Archive.php</p>
 
       </main>
     <?php get_sidebar(); ?>
