@@ -1,21 +1,16 @@
 /*
-Theme Name: WPHierarchy
-Theme URI: #
-Author: Ledwing Hernandez
-Author URI: https://github.com/Waka867
-Description: This is a test
+Theme Name: WP Hierarchy
+Author: Zac Gordon
+Author URI: https://zacgordon.com/
+Description: Demo theme for learning the WordPress Template Hierarchy
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: wphierarchy
 Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
+Lorem to the longer descriptionum.
 */
-
-
 
 body {
   background-color: #fff091;
@@ -47,6 +42,10 @@ h2.search-title {
 a {
   color: #494329;
   text-decoration: none;
+}
+
+#content a  {
+  text-decoration: underline;
 }
 
 pre {
@@ -165,6 +164,7 @@ footer.site-footer {
 
 article.post {
   margin-bottom: 4rem;
+  clear: both;
 }
 
 .author article.post {
@@ -183,7 +183,7 @@ article.post {
   float: right;
 }
 
-.archive article.portfolio:nth-child(even) {
+.archive article.portfolio {
   margin-right: 5%;
 }
 
@@ -207,6 +207,16 @@ article.post {
 #secondary {
   width: 25%;
   float: right;
+}
+
+.home #secondary {
+  width: 100%;
+  clear: both;
+}
+
+.home #secondary .widget {
+  width: 30%;
+  float: left;
 }
 
 #secondary h2 {
@@ -573,4 +583,3 @@ blockquote.right {
     width: 90% !important;
   }
 }
-
