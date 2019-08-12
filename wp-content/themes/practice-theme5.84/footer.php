@@ -1,11 +1,19 @@
-<footer>
+<footer class='practice-footer-style'>
 
-	<p>footer</p>
+	<?php 
+	wp_nav_menu( 
+		array(
+		'container_class' => 'custom-menu-style'
+		)
+	); ?>
 
 </footer>
 
 
-<?php wp_footer(); ?>
+<?php 
+	wp_footer(); 
+//	bloginfo( ' description' );
+?>
 
 </body>
 </html>

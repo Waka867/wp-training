@@ -9,9 +9,11 @@
         <?php wp_head(); ?>
     </head>
 	<nav>
-	<?php wp_nav_menu( 
+	<?php 
+	wp_nav_menu( 
 		array(
 		'container_class' => 'custom-menu-style'
 		)
 	); ?>
 	</nav>
+	<body class='<?php body_class(); ?>'>

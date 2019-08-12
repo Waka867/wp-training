@@ -14,6 +14,17 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 
 
+body {
+  margin: 0;
+  background-color: salmon;
+}
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------*/
+
 .custom-menu-style ul {
   list-style-type: none;
   margin: 0;
@@ -40,4 +51,28 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .custom-menu-style .active {
   background-color: red;
+}
+
+
+
+
+
+
+
+.practice-footer-style {
+	padding: 1%;
+	background-color: #333;
+	color: grey;
+}
+
+
+.practice-footer-style li a {
+	color: grey;
+}
+
+.site-content {
+	padding: 1%;
+	margin: 0 5% 0 5%;
+	background-color: white;
+	min-height: 100vh;
 }
