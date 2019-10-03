@@ -4,34 +4,29 @@
 function script_starter() {
 	wp_enqueue_style( 'custom-style', get_stylesheet_directory_uri() . '/style.css' );
 }
-
-
 add_action( 'wp_enqueue_scripts', 'script_starter' );
 
-
-
-
-
-/*
-// Register Widget Area / Sidebar
-function register_widget_area() {
-	$args = [
-		'Test Sidebar',
-		'test-sidebar',
-		'This sidebar is a test put together by Led',
-		'',
-		'',
-		'',
-		'',
-		''
-	];
-
-	register_sidebar( $args );
+function nav_menu_starter() {
+	// Register Nav Menus
+	register_nav_menus(
+			//[ 'main-menu' => 'Main Menu Led', 'backup-menu' => 'Backup Menu' ]
+			[ 'main-menu' => 'Main Menu Led', 'footer-menu' => 'Footer Menu' ]
+	);
 }
+add_action( 'init', 'nav_menu_starter' );
 
-add_action( 'widgets_init', 'register_widget_area' );
- */
+// // Include custom navwalker
+// require_once('bs4navwalker.php');
+//
+// // Register WordPress nav menu
+// register_nav_menu('top', 'Top menu');
 
+
+// Add Theme Support
+function theme_slug_setup() {
+   add_theme_support( 'title-tag' );
+}
+add_action( 'after_setup_theme', 'theme_slug_setup' );
 
 
 // Setup Widget Areas
@@ -47,6 +42,8 @@ function wptags_widgets_init() {
   ]);
 }
 add_action( 'widgets_init', 'wptags_widgets_init' );
+
+
 
 
 ?>

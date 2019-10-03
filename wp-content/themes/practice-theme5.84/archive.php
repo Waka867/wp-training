@@ -1,30 +1,31 @@
-
 <?php get_header(); ?>
 
 
 
 <div class='site-content'>
-
 <?php
 
 	if( have_posts() ){
 
+		echo "<article id='primary'>";
+
 		while( have_posts() ) {
-			the_post();
+				the_post();
 
-			//echo '<a href="' . get_permalink() . '"><h2>' . the_title() . '</h2></a>';
-			echo '<a href="';
-			the_permalink();
-			echo '">';
-			echo '<h2><strong>';
-			the_title();
-			echo '</strong></h2></a>';
+				//echo '<a href="' . get_permalink() . '"><h2>' . the_title() . '</h2></a>';
+				echo '<a href="';
+				the_permalink();
+				echo '">';
+				echo '<h2><strong>';
+				the_title();
+				echo '</strong></h2></a>';
 			
-
-			the_content();
-			// Replace some of this code with a page template
-
+				the_content();
+				// Replace some of this code with a page template
 		}
+
+		echo '</article>';
+
 	} else {
 ?>
 		<!--Add what happens if no posts found-->
@@ -37,7 +38,7 @@
 	get_sidebar();
 
 ?>
-
+	<p>archive.php</p>
 	
 </div>
 
