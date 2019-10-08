@@ -7,7 +7,8 @@
 
 	if( have_posts() ){
 
-		echo "<article id='primary'>";
+		echo '<article id="primary post-' . get_the_ID() . '"';
+		echo post_class() . '>';
 
 		while( have_posts() ) {
 				the_post();
@@ -19,7 +20,7 @@
 				echo '<h2><strong>';
 				the_title();
 				echo '</strong></h2></a>';
-			
+
 				the_content();
 				// Replace some of this code with a page template
 		}
@@ -39,7 +40,7 @@
 
 ?>
 	<p>index.php</p>
-	
+
 </div>
 
 

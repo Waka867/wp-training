@@ -8,7 +8,7 @@
         <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
         <?php wp_head(); ?>
     </head>
-    <body <?php body_class(); ?> >
+    <body <?php body_class(); ?>>
 	<nav>
 	<?php
 		$args =	[

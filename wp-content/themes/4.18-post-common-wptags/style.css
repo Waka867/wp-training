@@ -1,5 +1,5 @@
 /*
-Theme Name: 4.11 - Navigation Tags
+Theme Name: 4.18 - Common Post Tags
 Author: Zac Gordon
 Author URI: http://zacgordon.com
 Description: Demo theme for Zac Gordon's WordPress Development Course.
@@ -80,19 +80,24 @@ footer.site-footer {
   width: 80%;
 }
 
+#footer-menu li,
 .main-navigation li {
   list-style-type: none;
   display: inline-block;
 }
 
+#footer-menu li a,
 .main-navigation li a {
   padding: 5px;
 }
 
+#footer-menu li:hover>a,
 .main-navigation li:hover>a {
   color: #000;
 }
 
+#footer-menu li.current-menu-item>a,
+#footer-menu li.current-page-parent>a,
 .main-navigation li.current-menu-item>a,
 .main-navigation li.current-page-parent>a {
   font-weight: bold;
