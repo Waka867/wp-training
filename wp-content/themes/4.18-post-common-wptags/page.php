@@ -32,6 +32,20 @@
 
     </main>
 
+    <p>Page.php</p>
+
+    <?php
+    // var_export( get_post_meta( $post->ID ) );
+
+    if( 2 < get_post_meta( $post->ID ) ) {
+      esc_html_e( 'The Meta:', 'wp-training');
+
+      the_meta();
+
+      echo get_post_meta( $post->ID, 'Location', true );
+    }
+    ?>
+
   </div>
 
   <?php get_sidebar(); ?>

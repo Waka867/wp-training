@@ -11,7 +11,12 @@
 
           <header class="entry-header">
 
-            <h1><?php the_title(); ?></h1>
+            <?php if( !is_attachment() ){
+
+              // echo the_title( '<h2><a href="' . get_the_permalink() . '" title="' . the_title_attribute() . '">', '</a></h2>' );
+              echo the_title( '<h2><a href="' . get_the_permalink() . '">', '</a></h2>' );
+
+            } ?>
 
             <?php get_template_part( 'template-parts/byline' ); ?>
 
@@ -28,7 +33,9 @@
       <?php endwhile; endif; ?>
 
     </main>
-<p>single.php</p>
+
+    <p>single.php</p>
+
   </div>
 
   <?php get_sidebar(); ?>
