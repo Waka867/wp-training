@@ -16,7 +16,7 @@
 			'container_class'  => 'main-nav',
 			'theme_location'   => 'main-menu',
 			'container_class'  => 'custom-menu-style',
-      'depth'             => 0
+      'depth'            => 0
       //'fallback_cb'     => 'bs4navwalker::fallback',
       //'walker'          => new bs4navwalker()
 		];
