@@ -7,6 +7,7 @@
 
 	if( have_posts() ){
 
+
 		echo '<article id="primary post-' . get_the_ID() . '"';
 		echo post_class() . '>';
 
