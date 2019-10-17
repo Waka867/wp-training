@@ -4,7 +4,9 @@ if( ! is_active_sidebar( 'main-sidebar' ) ) {
 }
 ?>
 
-<aside id="secondary" class="widget-area" role="complementary">
+<!-- <aside id="secondary" class="widget-area" role="complementary"> -->
+<!-- <div id="secondary" class="widget-area" role="complementary"> -->
+<div id="" class="widget-area">
 
   <?php
 	/*$args = [
@@ -15,8 +17,9 @@ if( ! is_active_sidebar( 'main-sidebar' ) ) {
 	];
 
 	wp_get_archives( $args );*/
-  
-    	dynamic_sidebar( 'main-sidebar' ); 
+
+    	dynamic_sidebar( 'main-sidebar' );
   ?>
 
-</aside>
+<!-- </aside> -->
+</div>
