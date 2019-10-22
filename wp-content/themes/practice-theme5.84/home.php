@@ -2,7 +2,7 @@
 
 
 
-<div class='site-content container'>
+<div class='container site-content'>
 <?php
 
 	if( have_posts() ){

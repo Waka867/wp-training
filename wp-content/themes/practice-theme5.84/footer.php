@@ -19,8 +19,6 @@
 
 
 <?php
-
-//	bloginfo( ' description' );
 	wp_footer();
 ?>
 

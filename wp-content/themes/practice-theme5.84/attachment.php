@@ -18,44 +18,35 @@
 
 </div> -->
 
-<div class='container site-content' class="row">
-  <div class="col-md-12">
+<div class='container site-content'>
+  <div class='row'>
   <?php
 
 	if( have_posts() ){
 
-
-		echo '<article id="post-' . get_the_ID() . '" class="col-md-12" style="text-align: center;"';
+		echo '<div id="post-' . get_the_ID() . '" class="col-md-12" style="text-align: center;"';
 		echo post_class() . '>';
 
 		while( have_posts() ) {
 				the_post();
 
-				echo '<a href="';
-				the_permalink();
-				echo '">';
-				echo '<h2><strong>';
-				the_title();
-				echo '</strong></h2></a>';
-
-				the_content();
-
-        // posts_nav_link();
+        $attImage = wp_get_attachment_image( get_the_ID(), 'large', '', ['style' => 'margin-top: 5%;'] );
+        echo $attImage;
 
 		}
 
-		echo '</article></div>';
+		echo '</div>'; // Close .col-md-12
+    echo '</div>'; // Close .row
+
+    echo the_title( '<h1 style="text-align: center;"><strong>', $after = '</strong></h1>', $echo = true );
 
 	}
 
-
-	get_sidebar();
+	//get_sidebar();
 
 ?>
-<br><p>single.php</p>
+<br><p>attachment.php</p>
 
 </div>
-
-
 
 <?php get_footer(); ?>
