@@ -24,11 +24,29 @@ add_action( 'init', 'nav_menu_starter' );
 // register_nav_menu('top', 'Top menu');
 
 
-// Add Theme Support
+
+
+
+
+
+
+// Add Theme Support for new features
 function theme_slug_setup() {
    add_theme_support( 'title-tag' );
 }
 add_action( 'after_setup_theme', 'theme_slug_setup' );
+// Adds thumbnail/featured image support. This is where you would add it for new custom post types
+add_theme_support( 'post-thumbnails', [ 'post', 'page' ] );
+
+
+function practice_theme_post_formats_setup() {
+ add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ) );
+}
+add_action( 'after_setup_theme', 'practice_theme_post_formats_setup' );
+
+
+
+
 
 
 // Setup Widget Areas

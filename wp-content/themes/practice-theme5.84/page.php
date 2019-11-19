@@ -11,18 +11,22 @@
 		echo post_class() . '>';
 
 		while( have_posts() ) {
-				the_post();
+			the_post();
 
-				//echo '<a href="' . get_permalink() . '"><h2>' . the_title() . '</h2></a>';
-				echo '<a href="';
-				the_permalink();
-				echo '">';
-				echo '<h2><strong>';
-				the_title();
-				echo '</strong></h2></a>';
+			// Adds feature image/post thumbnail if present
+			if( has_post_thumbnail() ){
+				the_post_thumbnail( 'full', ['title' => get_the_title()] );
+			}		
 
-				the_content();
-				// Replace some of this code with a page template
+			echo '<a href="';
+			the_permalink();
+			echo '">';
+			echo '<h2><strong>';
+			the_title();
+			echo '</strong></h2></a>';
+
+			the_content();
+			// Replace some of this code with a page template
 		}
 
 		echo '</article>';

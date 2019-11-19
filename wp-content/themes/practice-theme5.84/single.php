@@ -40,16 +40,17 @@
 
 				the_content();
 
-        // posts_nav_link();
-
 		}
+
+		echo "<p class='prev-posts'>" . previous_post_link() . "</p>";
+		echo "<p class='next-posts'>" . next_post_link() . "</p>";
 
 		echo '</article></div>';
 
 	}
 
 
-	get_sidebar();
+	//get_sidebar();
 
 ?>
 <br><p>single.php</p>

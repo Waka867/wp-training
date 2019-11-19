@@ -13,8 +13,14 @@
 			echo '<article id="primary post-' . get_the_ID() . '"';
 			echo post_class() . '>';
 
-		while( have_posts() ) {
+			while( have_posts() ) {
 				the_post();
+
+				// Adds feature image/post thumbnail if present
+				if( has_post_thumbnail() ){
+					the_post_thumbnail( 'full', ['title' => get_the_title()] );
+				}
+
 
 				//echo '<a href="' . get_permalink() . '"><h2>' . the_title() . '</h2></a>';
 				echo '<a href="';
@@ -26,17 +32,24 @@
 
 				the_content();
 				// Replace some of this code with a page template
-		}
+			}
 
 			echo '</article></div></div>';
+
 		} else {
 			echo '<div class="row">';
 			echo '<div class="col-md-10">';
 			echo '<article id="primary post-' . get_the_ID() . '"';
 			echo post_class() . '>';
 
-		while( have_posts() ) {
+			while( have_posts() ) {
 				the_post();
+
+				// Adds feature image/post thumbnail if present
+				if( has_post_thumbnail() ){
+					the_post_thumbnail( 'full', ['title' => get_the_title()] );
+				}
+
 
 				//echo '<a href="' . get_permalink() . '"><h2>' . the_title() . '</h2></a>';
 				echo '<a href="';
@@ -48,11 +61,11 @@
 
 				the_content();
 				// Replace some of this code with a page template
-		}
+			}
 
 		echo '</article></div>';
 		echo'<div class="col-md-2">';
-		dynamic_sidebar('main-sidebar');
+		//dynamic_sidebar('main-sidebar');
 		echo "</div>";
 
 		echo '</div>';
