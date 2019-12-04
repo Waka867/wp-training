@@ -27,6 +27,10 @@
 
 			the_content();
 			// Replace some of this code with a page template
+			
+
+			//Edit link
+			echo edit_post_link();
 		}
 
 		echo '</article>';

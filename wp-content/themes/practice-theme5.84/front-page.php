@@ -6,8 +6,19 @@
 <?php
 
 	if( have_posts() ){
+?>
+		
+		<!-- Display page title -->
+		<a href="<?php the_permalink()?>" title="<?php the_title_attribute() ?>">
+			<h1><strong> <?php the_title() ?></strong></h1>
+		</a>
+
+<?php
 
 		if( !is_active_sidebar( 'main-sidebar' ) ){
+			
+			
+			
 			echo '<div class="row">';
 			echo '<div class="col-md-12">';
 			echo '<article id="primary post-' . get_the_ID() . '"';
@@ -22,7 +33,6 @@
 				}
 
 
-				//echo '<a href="' . get_permalink() . '"><h2>' . the_title() . '</h2></a>';
 				echo '<a href="';
 				the_permalink();
 				echo '">';
@@ -32,8 +42,11 @@
 
 				the_content();
 				// Replace some of this code with a page template
+				
 			}
 
+			
+			
 			echo '</article></div></div>';
 
 		} else {
@@ -51,23 +64,17 @@
 				}
 
 
-				//echo '<a href="' . get_permalink() . '"><h2>' . the_title() . '</h2></a>';
-				echo '<a href="';
-				the_permalink();
-				echo '">';
-				echo '<h2><strong>';
-				the_title();
-				echo '</strong></h2></a>';
 
 				the_content();
 				// Replace some of this code with a page template
+				
+				//Edit link
+				echo edit_post_link();
 			}
 
 		echo '</article></div>';
 		echo'<div class="col-md-2">';
-		//dynamic_sidebar('main-sidebar');
 		echo "</div>";
-
 		echo '</div>';
 
 
