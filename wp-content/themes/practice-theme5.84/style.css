@@ -16,7 +16,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 body {
   margin: 0;
-  background-color: #dfd4b4;
+  background-color: #1c2229;
 }
 
 /*------------------------------------------------------------------------------------------------------*/
@@ -67,7 +67,10 @@ body {
 }
 
 .site-content img {
-
+	width: 100%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 
@@ -84,4 +87,16 @@ body {
 #secondary {
 	width: 30%;
 	float: right;
+}
+
+#custom-site-banner {
+	height: 120px;
+	width: 100%;
+	margin: -20px 0 0 0;
+	background-color: white;
+	font-size: 2.5em;
+}
+
+#custom-site-banner-title {
+	text-align: center;
 }

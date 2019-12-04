@@ -1,5 +1,12 @@
-<?php get_header(); ?>
+<?php 
 
+
+get_header(); 
+
+//This is where we utilize a template part to display the site title banner
+echo get_template_part('template-parts/site-banner');
+
+?>
 
 
 <div class='container site-content'>
@@ -18,7 +25,6 @@
 		if( !is_active_sidebar( 'main-sidebar' ) ){
 			
 			
-			
 			echo '<div class="row">';
 			echo '<div class="col-md-12">';
 			echo '<article id="primary post-' . get_the_ID() . '"';
@@ -26,23 +32,22 @@
 
 			while( have_posts() ) {
 				the_post();
-
+				
+				
 				// Adds feature image/post thumbnail if present
 				if( has_post_thumbnail() ){
-					the_post_thumbnail( 'full', ['title' => get_the_title()] );
+					//the_post_thumbnail( 'full', ['title' => get_the_title()] );
+					the_post_thumbnail();
 				}
 
 
-				echo '<a href="';
-				the_permalink();
-				echo '">';
-				echo '<h2><strong>';
-				the_title();
-				echo '</strong></h2></a>';
-
-				the_content();
+				echo "<section>";
+			       	echo the_content();
+				echo "</section>";
 				// Replace some of this code with a page template
 				
+				//Edit link
+				echo edit_post_link();
 			}
 
 			
@@ -58,14 +63,18 @@
 			while( have_posts() ) {
 				the_post();
 
+				
 				// Adds feature image/post thumbnail if present
 				if( has_post_thumbnail() ){
-					the_post_thumbnail( 'full', ['title' => get_the_title()] );
+					//the_post_thumbnail( 'full', ['title' => get_the_title()] );
+					the_post_thumbnail();
 				}
 
 
 
-				the_content();
+				echo "<section>";
+			       	echo the_content();
+				echo "</section>";
 				// Replace some of this code with a page template
 				
 				//Edit link
@@ -92,7 +101,7 @@
 	// get_sidebar();
 
 ?>
-	<br><br><p>front-page.php</p>
+	<br><br><p>front-page.php derp</p>
 
 </div>
 

@@ -1,5 +1,12 @@
-<?php get_header(); ?>
+<?php 
 
+
+get_header(); 
+
+//This is where we utilize a template part to display the site title banner
+echo get_template_part('template-parts/site-banner');
+
+?>
 
 
 <div class='container site-content'>
