@@ -8,23 +8,10 @@ echo get_template_part('template-parts/site-banner');
 
 ?>
 
-<!-- <div class='site-content container'>
 
-	<article id="p" class="row">
-		<div class="col-md-12">
-			<h1 style="text-align: center; font-size: 3em;">Whoops! It's a 404!</h1>
-			<img style="width: 50%; display: block; margin: 5% auto 0 auto;" src="https://media.giphy.com/media/Beyusevd47X7W/giphy.gif">
-		</div>
-	</article>
 
-	<article id="" class="row" style="text-align: center;">
-		<div class="col-md-12">
-			<h1>Sorry, the page you are looking for could not be found</h1>
-			<?php	//get_search_form(); 	//get_sidebar(); ?>
-		</div>
-	</article>
 
-</div> -->
+
 
 <div class='container site-content' class="row">
   <div class="col-md-12">
@@ -54,6 +41,11 @@ echo get_template_part('template-parts/site-banner');
 		echo "<p class='next-posts'>" . next_post_link() . "</p>";
 
 		echo '</article></div>';
+		
+
+
+		//Comments section - per docs will not try to load comments if post has none so that's why this is not in an if statement
+		comments_template();
 
 	}
 
