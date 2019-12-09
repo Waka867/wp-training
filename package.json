@@ -1,0 +1,27 @@
+{
+  "name": "wp-training",
+  "version": "1.0.0",
+  "description": "WordPress training based on Udemy course titled \"Complete WordPress Development Themes and Plugins Course\"",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  },
+  "scripts": {
+    "test": "echo \"All is good in the hood\" && exit 1",
+    "scss": "node-sass --watch --output-style compressed wp-content/themes/practice-theme5.84/assets/scss -o wp-content/themes/practice-theme5.84"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Waka867/wp-training.git"
+  },
+  "keywords": [
+    "Ledwing"
+  ],
+  "author": "Ledwing Hernandez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Waka867/wp-training/issues"
+  },
+  "homepage": "https://github.com/Waka867/wp-training#readme"
+}

@@ -44,7 +44,7 @@ echo get_template_part('template-parts/site-banner');
 		
 
 
-		//Comments section - per docs will not try to load comments if post has none so that's why this is not in an if statement
+		//Comments section - grabs content from comments.php
 		comments_template();
 
 	}
