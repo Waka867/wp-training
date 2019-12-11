@@ -1,10 +1,14 @@
 <?php
 
-// Load CSS
+// Load scripts
 function script_starter() {
 	wp_enqueue_style( 'custom-style', get_stylesheet_directory_uri() . '/style.css' );
 	wp_enqueue_script( 'custom-jscript', get_stylesheet_directory_uri() . '/assets/functionality.js', array('jquery'), '', true );
 	wp_enqueue_style( 'bootstrap-grid', get_stylesheet_directory_uri() . '/assets/bootstrap-css/bootstrap-grid.min.css' );	
+	// Loads script for comment reply
+	if( is_singular() && comments_open() ){
+		wp_enqueue_script( 'comment-reply' );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'script_starter' );
 
@@ -47,7 +51,6 @@ add_action( 'after_setup_theme', 'practice_theme_post_formats_setup' );
 
 
 
-
 // Setup Widget Areas
 function wptags_widgets_init() {
   register_sidebar([
@@ -65,6 +68,7 @@ add_action( 'widgets_init', 'wptags_widgets_init' );
 
 // Declare comment callback function
 function comment_display() {
+	// Gets code from comment.php
 	get_template_part('comment');
 };
 
