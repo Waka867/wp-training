@@ -8,17 +8,17 @@ if( post_password_required() ){
 
 
 echo '<div id="comments-main-section" class="comments-area">
-	<p>This post has ' . get_comments_number() . ' comments.</p>
+	<h2><strong>' . get_comments_number() . ' comments.</strong></h2>
 	<div id="comments">';
 
 
 
-$attr = [
-	'avatar_size' => 75 
+
+// Set px size for author avatar image in comments list
+$attr = [ 
+	'avatar_size' 	=> 75
+	//'callback' 	=> 'comment_display' ,
 ];
-
-
-
 // If comments present, list them
 if( have_comments() ){
 	wp_list_comments( $attr );

@@ -44,7 +44,7 @@ echo get_template_part('template-parts/site-banner');
 		
 
 
-		//Comments section - grabs content from comments.php
+		//Comments section - grabs content from comments.php and comment.php
 		comments_template();
 
 	}

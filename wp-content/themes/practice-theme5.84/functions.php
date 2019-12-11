@@ -29,7 +29,6 @@ add_action( 'init', 'nav_menu_starter' );
 
 
 
-
 // Add Theme Support for new features
 function theme_slug_setup() {
    add_theme_support( 'title-tag' );
@@ -64,6 +63,9 @@ function wptags_widgets_init() {
 add_action( 'widgets_init', 'wptags_widgets_init' );
 
 
-
+// Declare comment callback function
+function comment_display() {
+	get_template_part('comment');
+};
 
 ?>

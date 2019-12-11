@@ -15,7 +15,35 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 $master-color: #1c2229;
 
+/*------------------------------------------------------------------------------------------------------*/
 
+
+@fontface {
+  font-family: 'Montserrat-Regular', sans-serif;
+  src: url('assets/fonts/Montserrat-Regular.ttf') format( 'truetype' );
+  font-weight: normal;
+  font-style: normal;
+}
+
+@fontface {
+  font-family:' Montserrat-Italic', sans-serif;
+  src: url('assets/fonts/Montserrat-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@fontface {
+  font-family: 'Montserrat-Bold', sans-serif;
+  src: url('assets/fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@fontface {
+  font-family: 'Montserrat-Bold-Italic', sans-serif;
+  src: url('assets/fonts/Montserrat-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
 
 
 /*------------------------------------------------------------------------------------------------------*/
@@ -131,6 +159,7 @@ body {
 
 #custom-site-banner-title {
 	text-align: center;
+  font-family: 'Montserrat-Regular';
 }
 
 #primary {
