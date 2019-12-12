@@ -19,6 +19,8 @@ echo get_template_part('template-parts/site-banner');
 
 	if( have_posts() ){
 
+		//Shows byline
+		byline_display();
 
 		echo '<article id="post-' . get_the_ID() . '" class="col-md-12" style="text-align: center;"';
 		echo post_class() . '>';

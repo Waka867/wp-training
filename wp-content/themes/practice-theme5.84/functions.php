@@ -4,7 +4,7 @@
 function script_starter() {
 	wp_enqueue_style( 'custom-style', get_stylesheet_directory_uri() . '/style.css' );
 	wp_enqueue_script( 'custom-jscript', get_stylesheet_directory_uri() . '/assets/functionality.js', array('jquery'), '', true );
-	wp_enqueue_style( 'bootstrap-grid', get_stylesheet_directory_uri() . '/assets/bootstrap-css/bootstrap-grid.min.css' );	
+	wp_enqueue_style( 'bootstrap-grid', get_stylesheet_directory_uri() . '/assets/bootstrap-css/bootstrap-grid.min.css' );
 	// Loads script for comment reply
 	if( is_singular() && comments_open() ){
 		wp_enqueue_script( 'comment-reply' );
@@ -51,7 +51,7 @@ add_action( 'after_setup_theme', 'practice_theme_post_formats_setup' );
 
 
 
-// Setup Widget Areas
+// SET UP FOR WIDGET AREAS
 function wptags_widgets_init() {
   register_sidebar([
     'name'          => esc_html__( 'Main Sidebar', 'wptags' ),
@@ -66,10 +66,20 @@ function wptags_widgets_init() {
 add_action( 'widgets_init', 'wptags_widgets_init' );
 
 
+
+
+
+// TEMPLATE PART DISPLAY FUNCTIONS
 // Declare comment callback function
 function comment_display() {
 	// Gets code from comment.php
 	get_template_part('comment');
+};
+
+// Declare byline display function
+function byline_display() {
+	// Gets code from /template-parts/byline.php
+	echo get_template_part('template-parts/byline');
 };
 
 ?>
