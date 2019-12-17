@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "echo \"All is good in the hood\" && exit 1",
-    "scss": "node-sass --watch --output-style compressed wp-content/themes/practice-theme5.84/assets/scss -o wp-content/themes/practice-theme5.84"
+    "scss": "node-sass --watch --output-style compact wp-content/themes/Castle_Wackula/assets/scss -o wp-content/themes/Castle_Wackula"
   },
   "repository": {
     "type": "git",
